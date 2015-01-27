@@ -1,2 +1,2 @@
-from test_broken_links import TestLinks
 from test_settings import TestSettings
+from test_views import TestViews
