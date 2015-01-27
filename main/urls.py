@@ -2,12 +2,15 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'main.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-	
 	# main access point to site
-	# Don't know if index is a good name or not...
-	url(r'^$', 'main.views.index.index', name='index'),
+	url(r'^$', 'main.views.index', name='index'),
+    # all performances
+    url(r'^performance$', 'main.views.performance.all', name='performance'),
+    # performance detail: performance/1234
+    url(r'^performance/(?P<id>\d+)', 'main.views.performance.detail', name='performance.id'),
+    # performance detail: performance/1234/some_descriptive_text_for_useability_that_doesnt matter
+    url(r'^performance/(?P<id>\d+)/(?P<slug>.+)', 'main.views.performance.detail',
+        name='performance.id.slug'),
+    # admin
     url(r'^admin/', include(admin.site.urls)),
 )
