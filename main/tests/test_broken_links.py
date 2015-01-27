@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-class TestViews(TestCase):
+class TestLinks(TestCase):
     """
     Use the test client to get all of the views and test that the correct template was used.
     """
