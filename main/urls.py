@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     # performance detail: performance/1234/some_descriptive_text_for_useability_that_doesnt matter
     url(r'^performance/(?P<id>\d+)/(?P<slug>.+)', 'main.views.performance.detail',
         name='performance.id.slug'),
+	url(r'^location$', 'main.views.index.location', name='location'),
     # admin
     url(r'^admin/', include(admin.site.urls)),
 )
