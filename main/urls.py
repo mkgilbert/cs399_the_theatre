@@ -12,6 +12,8 @@ urlpatterns = patterns('',
     url(r'^performance/(?P<id>\d+)/(?P<slug>.+)', 'main.views.performance.detail',
         name='performance.id.slug'),
 	url(r'^location$', 'main.views.location', name='location'),
+	# merch
+	url(r'^merch$', 'merch.views.index', name='merch'),
     # admin
     url(r'^admin/', include(admin.site.urls)),
 )
