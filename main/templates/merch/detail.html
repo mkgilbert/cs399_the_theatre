@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<h1>{{ inventory_item.item_name }}</h1>
+	<img src={{ inventory_item.image }}></img>
+	
+	<p>{{ inventory_item.description }}<br>
+	<button class="btn"><h4><b>${{ inventory_item.price }}</b></h4></button>
+	
+{% endblock %}

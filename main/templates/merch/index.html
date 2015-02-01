@@ -3,15 +3,10 @@
 {% block content %}
 
 	<h1>Merch!</h1>
-	<ul>
+
 	{% for item in inventory_list %}
-		<li>
+		<a href="{% url 'merch_detail' item.id %}"><img src={{ item.image }}></img></a>
 		<h4>{{ item.item_name }}</h4>
-		<img src={{ item.image }}></img><br>
-		{{ item.description }}
-		<br>
-		<b>${{ item.price }}</b>
-		</li>
 	{% endfor %}
-	</ul>
+	
 {% endblock %}

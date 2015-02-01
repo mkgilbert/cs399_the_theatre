@@ -14,6 +14,7 @@ urlpatterns = patterns('',
 	url(r'^location$', 'main.views.location', name='location'),
 	# merch
 	url(r'^merch$', 'merch.views.index', name='merch'),
+	url(r'^merch/(?P<inventory_id>\d+)/$', 'merch.views.detail', name='merch_detail'),
     # admin
     url(r'^admin/', include(admin.site.urls)),
 )
