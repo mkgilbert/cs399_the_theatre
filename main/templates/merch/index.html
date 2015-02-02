@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Merch home{% endblock %}
+
+{% block content %}
+
+	<h1>Merch!</h1>
+
+	{% for item in inventory_list %}
+		<a href="{% url 'merch_detail' item.id %}"><img src={{ item.image }}></img></a>
+		<h4>{{ item.item_name }}</h4>
+	{% endfor %}
+	
+{% endblock %}
