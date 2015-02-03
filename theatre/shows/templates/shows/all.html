@@ -18,7 +18,7 @@
                         <div class="description">
                             <p>{{ show.description }}</p>
 
-                            <p><a href="">Read More</a></p>
+                            <p><a href="{% url 'shows:id' show.id %}">Read More</a></p>
                         </div>
                         <button class="btn btn-primary btn-block">Buy Ticket</button>
                     </div>
