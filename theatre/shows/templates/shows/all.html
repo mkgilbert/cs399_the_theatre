@@ -1,5 +1,30 @@
 {% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="/static/css/shows.css">
 
+{% endblock %}
 {% block content %}
-	<p>All performances...</p>
+    <div class="container">
+        <h2>Upcoming Shows</h2>
+
+        <div class="row">
+
+            {% for show in shows %}
+                <div class="col-md-3">
+                    <div class="well well-sm show">
+                        <h3 class="title">{{ show.name }}</h3>
+                        <h5 class="text-muted">{{ show.date }}</h5>
+
+                        <div class="description">
+                            <p>{{ show.description }}</p>
+
+                            <p><a href="">Read More</a></p>
+                        </div>
+                        <button class="btn btn-primary btn-block">Buy Ticket</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
 {% endblock %}

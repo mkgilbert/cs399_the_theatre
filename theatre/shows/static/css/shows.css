@@ -1,0 +1,9 @@
+.show .title {
+    margin-top: 2px;
+    min-height: 50px;
+}
+
+.show .description {
+        min-height: 100px;
+
+}
