@@ -1,5 +1,18 @@
 {% extends "base.html" %}
-
+{% block head %}
+    <link rel="stylesheet" href="/static/css/shows.css">
+{% endblock %}
 {% block content %}
-    <p>Specific performance...</p>
+    <div class="container container-margin">
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shows">Shows</a></li>
+            <li class="active">{{ show.name }}</li>
+        </ol>
+        <h3 class="title">{{ show.name }}</h3>
+        <h5 class="text-muted">{{ show.date }}</h5>
+
+        <p>{{ show.description }}</p>
+        <p class="text-muted">{{ show.length }} minutes</p>
+    </div>
 {% endblock %}
