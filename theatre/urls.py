@@ -8,6 +8,8 @@ urlpatterns = patterns('',  # main access point to site
                                            app_name='shows')),
                        (r'^merch', include('merch.urls', namespace='merch',
                                            app_name='merch')),
+                       (r'^menu', include('menu.urls', namespace='menu',
+                                           app_name='menu')),
                        # admin
                        url(r'^admin/', include(admin.site.urls)),
 )
