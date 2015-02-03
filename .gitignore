@@ -38,3 +38,5 @@ coverage.xml
 .mr.developer.cfg
 
 .idea/*
+
+Thumbs.db
