@@ -1,2 +1,0 @@
-from test_settings import TestSettings
-from test_views import TestViews
