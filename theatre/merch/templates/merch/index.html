@@ -7,7 +7,7 @@
 	<h1>Merch!</h1>
 
 	{% for item in inventory_list %}
-		<a href="{% url 'merch_detail' item.id %}"><img src={{ item.image }}></img></a>
+		<a href="{% url 'merch:merch_detail' item.id %}"><img src={{ item.image }}/></a>
 		<h4>{{ item.item_name }}</h4>
 	{% endfor %}
 	

@@ -2,13 +2,10 @@ from django.test import Client, TestCase
 from django.test.client import RequestFactory
 from django.core.urlresolvers import reverse
 from django.contrib.staticfiles import finders
-from main.settings import STATICFILES_DIRS, BASE_DIR
-
+from theatre.settings import STATICFILES_DIRS, BASE_DIR
 
 
 class TestSettings(TestCase):
-
-
     def test_static_config(self):
         """
         Tests the static file configuration to make sure
