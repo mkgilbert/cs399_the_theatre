@@ -10,3 +10,9 @@ class Show(models.Model):
 
     def __str__(self):
         return self.name
+
+class Seat(models.Model):
+    row = models.IntegerField()
+    column = models.IntegerField()
+    name = models.CharField(max_length=10)
+    group = models.CharField(max_length=30)
