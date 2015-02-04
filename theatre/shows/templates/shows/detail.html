@@ -9,10 +9,31 @@
             <li><a href="/shows">Shows</a></li>
             <li class="active">{{ show.name }}</li>
         </ol>
-        <h3 class="title">{{ show.name }}</h3>
-        <h5 class="text-muted">{{ show.date }}</h5>
+        <div class="row">
+            <div class="col-sm-7">
+                <h3 class="title">{{ show.name }}</h3>
+                <h5 class="text-muted">{{ show.date }}</h5>
 
-        <p>{{ show.description }}</p>
-        <p class="text-muted">{{ show.length }} minutes</p>
+                <p>{{ show.description }}</p>
+
+                <p class="text-muted">{{ show.length }} minutes {{ show.tickets_available }}</p>
+            </div>
+            <div class="col-sm-5">
+                <div style="max-width: 400px">
+                    {% for ticket in tickets %}
+                        {% if ticket.seat.column == 0 %}
+                            <div class="row ">
+
+                        {% endif %}
+                    <div class="col-xs-1 seat {% if ticket.sold == True %}seat-sold{% endif %}">
+                        {{ ticket.seat.name }}
+                    </div>
+                    {% if ticket.seat.column == 9 %}
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
