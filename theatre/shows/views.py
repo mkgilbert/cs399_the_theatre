@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from models import Show
 
+
 def all(request):
     shows = Show.objects.all()
     context = {"shows": shows}
@@ -9,5 +10,5 @@ def all(request):
 
 def detail(request, id, slug=None):
     show = get_object_or_404(Show, pk=id)
-    context = {"show": show}
+    context = {"show": show, "tickets": show.tickets.all()}
     return render(request, "shows/detail.html", context)
