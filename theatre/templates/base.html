@@ -31,6 +31,8 @@
 
 </head>
 <body>
+	<div id="wrapper">
+
 <!-- Fixed navbar -->
 <nav class="navbar navbar-inverse navbar-static-top" style="margin: 0">
     <div class="container" >
@@ -55,30 +57,37 @@
         <!--/.nav-collapse -->
     </div>
 </nav>
+        <div id="content">
 {% block content %}{% endblock %}
-
+        </div>
 <!-- footer with social media icons -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8">
-                <h5 class="text-muted">&#0169 2015 FlickNFeast</h5>
-            </div>
-            <div class="col-sm-4">
-                <div class="social">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
-                        <li><a href="https://github.com/mkgilbert/cs399_the_theatre.git"><i
-                                class="fa fa-lg fa-github"></i></a></li>
-                    </ul>
+    <div id="footer">
+<footer>
+    <div class="bottom">
+        <center>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h5 class="text-muted">&#0169 2015 FlickNFeast</h5>
+                </div>
+                <div class="col-sm-4">
+                    <div class="social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
+                            <li><a href="https://github.com/mkgilbert/cs399_the_theatre.git"><i
+                                    class="fa fa-lg fa-github"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+        </center>
     </div>
 </footer>
-
+    </div>
+    </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
