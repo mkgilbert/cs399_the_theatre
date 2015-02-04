@@ -10,7 +10,7 @@
             <li class="active">{{ show.name }}</li>
         </ol>
         <div class="row">
-            <div class="col-sm-7">
+            <div class="col-sm-4">
                 <h3 class="title">{{ show.name }}</h3>
                 <h5 class="text-muted">{{ show.date }}</h5>
 
@@ -18,14 +18,14 @@
 
                 <p class="text-muted">{{ show.length }} minutes</p>
             </div>
-            <div class="col-sm-5">
-                <div style="max-width: 400px">
+            <div class="col-sm-8">
+                <div style=" margin: 20px;">
                     {% for ticket in tickets %}
                         {% if ticket.seat.column == 0 %}
                             <div class="row ">
 
                         {% endif %}
-                    <div class="col-xs-1 seat {% if ticket.sold == True %}seat-sold{% endif %}">
+                    <div class="col-xs-1 seat {% if ticket.sold == True %}seat-sold{% endif %} {% if ticket.seat.column == 0 %} col-xs-offset-1{% endif %}">
                         <a href="/shows/{{ show.id }}/ticket/{{ ticket.id }}">{{ ticket.seat.name }}</a>
                     </div>
                     {% if ticket.seat.column == 9 %}
