@@ -16,7 +16,7 @@
 
                 <p>{{ show.description }}</p>
 
-                <p class="text-muted">{{ show.length }} minutes {{ show.tickets_available }}</p>
+                <p class="text-muted">{{ show.length }} minutes</p>
             </div>
             <div class="col-sm-5">
                 <div style="max-width: 400px">
@@ -26,7 +26,7 @@
 
                         {% endif %}
                     <div class="col-xs-1 seat {% if ticket.sold == True %}seat-sold{% endif %}">
-                        {{ ticket.seat.name }}
+                        <a href="/shows/{{ show.id }}/ticket/{{ ticket.id }}">{{ ticket.seat.name }}</a>
                     </div>
                     {% if ticket.seat.column == 9 %}
                         </div>
