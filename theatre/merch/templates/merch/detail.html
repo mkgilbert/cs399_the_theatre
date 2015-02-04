@@ -4,6 +4,12 @@
 
 {% block content %}
     <div class="container container-margin">
+		<ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/merch">Merchandise</a></li>
+            <li class="active">{{ inventory_item.item_name }}</li>
+        </ol>
+		
         <div class="row">
             <div class="col-sm-3">
                 <img class="img-responsive img-thumbnail" src={{ inventory_item.image }}/>

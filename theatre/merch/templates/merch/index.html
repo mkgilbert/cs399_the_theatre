@@ -4,7 +4,13 @@
 
 {% block content %}
     <div class="container container-margin">
-        <div class="row">
+		<ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">Merchandise</li>
+        </ol>
+        <h2>Merchandise</h2>
+        
+		<div class="row">
             {% for item in inventory_list %}
                 <div class="col-sm-3">
                     <a href="{% url 'merch:merch_detail' item.id %}">
