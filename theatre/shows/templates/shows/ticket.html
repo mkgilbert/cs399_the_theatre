@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="/static/css/shows.css">
+{% endblock %}
+{% block content %}
+    <div class="container container-margin">
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shows">Shows</a></li>
+            <li><a href="/shows/{{ show.id }}">{{ show.name }}</a></li>
+            <li class="active">Seat {{ ticket.seat.name }}</li>
+        </ol>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="title">{{ show.name }}</h3>
+                <h5 class="text-muted">{{ show.date }}</h5>
+
+                {% if ticket.sold == True %}
+                    <p>This ticket is sold, but there
+                        are {{ show.tickets_available }} tickets still available.</p>
+                {% else %}
+                    <h4>${{ show.price }}</h4>
+                    <button class="btn btn-primary">Buy</button>
+                {% endif %}
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
