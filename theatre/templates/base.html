@@ -33,60 +33,54 @@
 <body>
 	<div id="wrapper">
 
-<!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-static-top" style="margin: 0">
-    <div class="container" >
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Flick N Feast</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/shows">Shows</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/merch">Merchandise</a></li>
-                <li><a href="/location">Location</a></li>
-            </ul>
-        </div>
-        <!--/.nav-collapse -->
-    </div>
-</nav>
-        <div id="content">
-{% block content %}{% endblock %}
-        </div>
-<!-- footer with social media icons -->
-    <div id="footer">
-<footer>
-    <div class="bottom">
-        <center>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h5 class="text-muted pull-left">&#0169 2015 FlickNFeast</h5>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-inverse navbar-static-top" style="margin: 0">
+            <div class="container" >
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Flick N Feast</a>
                 </div>
-                <div class="col-sm-4">
-                    <div class="social">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
-                            <li><a href="https://github.com/mkgilbert/cs399_the_theatre.git"><i
-                                    class="fa fa-lg fa-github"></i></a></li>
-                        </ul>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/shows">Shows</a></li>
+                        <li><a href="/menu">Menu</a></li>
+                        <li><a href="/merch">Merchandise</a></li>
+                        <li><a href="/location">Location</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+        <!-- footer with social media icons -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h5 class="text-muted pull-left">&#0169 2015 FlickNFeast</h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
+                                <li><a href="https://github.com/mkgilbert/cs399_the_theatre.git"><i
+                                        class="fa fa-lg fa-github"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </center>
-    </div>
-</footer>
-    </div>
+        </footer>
     </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
