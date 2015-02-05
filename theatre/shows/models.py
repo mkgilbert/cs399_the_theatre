@@ -20,7 +20,6 @@ class Show(models.Model):
     price = models.IntegerField(default=0)
     date = models.DateField(null=False)
     tickets = models.ManyToManyField(Ticket)
-    image = models.ImageField()
 
 
     def _tickets_available(self):
