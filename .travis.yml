@@ -6,6 +6,6 @@ install:
   - pip install -r requirements.txt
   - pip install coveralls
 script:
-  - coverage run theatre/manage.py test
+  - coverage run theatre/manage.py test main menu merch shows
 after_success:
   coveralls

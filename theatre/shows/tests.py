@@ -29,8 +29,6 @@ class TestViews(TestCase):
     def test_show_detail_url(self):
         url = reverse('shows:id', kwargs={'id': 1})
         self.assertEqual(url, '/shows/1')
-        url = reverse('shows:id.slug', kwargs={'id': 1, 'slug': 'test'})
-        self.assertEqual(url, '/shows/1/test')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'shows/detail.html')
