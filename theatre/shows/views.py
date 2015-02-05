@@ -14,8 +14,7 @@ def detail(request, id, slug=None):
     return render(request, "shows/detail.html", context)
 
 
-def ticket(request,show_id, ticket_id):
-
+def ticket(request, show_id, ticket_id):
     context = {
         "ticket": get_object_or_404(Ticket, pk=ticket_id),
         "show": get_object_or_404(Show, pk=show_id)
