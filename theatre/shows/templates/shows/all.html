@@ -5,10 +5,11 @@
 {% endblock %}
 {% block content %}
     <div class="container container-margin">
-
+		
         <h1>Upcoming Shows</h1><hr>
         <div class="row">
 		<body background="/static/images/ticketbackground.jpg">
+		<!--http://wallpaper-kid.com/plain-black-background-images-hd.htm-->
             {% for show in shows %}
                 <div class="col-md-3">
                     <div class="well well-sm show">
@@ -17,6 +18,7 @@
 
                         <div class="description">
                             <p>{{ show.description }}</p>
+							<p> <img src="/static/images/good.jpg" alt="Good"</p>
 
                             <p><a href="{% url 'shows:id' show.id %}">Read More</a></p>
                         </div>
